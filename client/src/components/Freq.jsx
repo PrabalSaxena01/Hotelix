@@ -42,23 +42,29 @@ function FAQs() {
   return (
     <div className="bg-gray-200 py-10 px-5 bg-[F4F7FA]">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-center mb-8 text-5xl font-semibold">
+        <h1 className="text-center mb-4 text-4xl md:text-5xl font-semibold font-playfair">
           Frequently Asked Questions
         </h1>
-        <p className="text-lg text-center mb-14 font-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p className="text-base text-center mb-10 text-gray-600 font-normal">
+          Explore essential information regarding check-in times, luxury amenities, cancellation policies, and bespoke reservations.
         </p>
         {faqs.map((faq, index) => (
           <Accordion key={index} question={faq.question} answer={faq.answer} />
         ))}
-        <div className="text-center mt-12 text-lg font-light">
-          Haven't got your answer?
+        <div className="text-center mt-10 text-base font-normal text-gray-700 flex flex-wrap items-center justify-center gap-3">
+          <span>Need further assistance?</span>
           <a
-            href="/support"
-            className="hover:text-blue-700 ml-2 text-violet-600 font-light"
+            href="/contact"
+            className="hover:underline font-semibold text-blue-600"
           >
-            Contact our support now
+            Contact concierge desk now
+          </a>
+          <span className="text-gray-300">|</span>
+          <a
+            href="/faqs"
+            className="hover:underline font-semibold text-gray-800"
+          >
+            Browse all FAQs
           </a>
         </div>
       </div>

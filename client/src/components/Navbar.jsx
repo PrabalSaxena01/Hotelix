@@ -14,8 +14,11 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/', isSection: false },
         { name: 'Hotels', path: '/rooms', isSection: false },
-        { name: 'Experience', path: '/#experience', sectionId: 'experience', isSection: true },
-        { name: 'About', path: '/#about', sectionId: 'about', isSection: true },
+        { name: 'Offers', path: '/promotions', isSection: false },
+        { name: 'Amenities', path: '/utilities', isSection: false },
+        { name: 'Add-Ons', path: '/add-ons', isSection: false },
+        { name: 'Policies', path: '/policies', isSection: false },
+        { name: 'Contact', path: '/contact', isSection: false },
     ];
 
     const [isScrolled, setIsScrolled] = useState(false);
@@ -105,18 +108,16 @@ const Navbar = () => {
                     );
                 })}
 
-                {user && !loadingUser && (
-                    <button
-                        className={`border px-4 py-1.5 text-xs tracking-wide uppercase font-medium rounded-full cursor-pointer transition-all duration-200 active:scale-95 ${
-                            isScrolled
-                                ? 'border-gray-800 text-gray-800 hover:bg-gray-900 hover:text-white'
-                                : 'border-white text-white hover:bg-white hover:text-gray-900'
-                        }`}
-                        onClick={() => isOwner ? navigate('/owner') : setShowHotelReg(true)}
-                    >
-                        {isOwner ? 'Dashboard' : 'Register Hotel'}
-                    </button>
-                )}
+                <button
+                    className={`border px-3.5 py-1.5 text-xs tracking-wide uppercase font-semibold rounded-full cursor-pointer transition-all duration-200 active:scale-95 ${
+                        isScrolled
+                            ? 'border-gray-800 text-gray-800 hover:bg-gray-900 hover:text-white'
+                            : 'border-white text-white hover:bg-white hover:text-gray-900'
+                    }`}
+                    onClick={() => isOwner ? navigate('/owner') : (user ? setShowHotelReg(true) : navigate('/owner'))}
+                >
+                    {isOwner ? 'Owner Dashboard' : (user ? 'Register Hotel' : 'Hotel Portal')}
+                </button>
             </div>
 
             {/* Desktop Right */}
@@ -200,17 +201,15 @@ const Navbar = () => {
                     );
                 })}
 
-                {user && !loadingUser && (
-                    <button
-                        className="mt-4 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 text-sm font-medium rounded-full cursor-pointer transition-all active:scale-95"
-                        onClick={() => {
-                            setIsMenuOpen(false);
-                            isOwner ? navigate('/owner') : setShowHotelReg(true);
-                        }}
-                    >
-                        {isOwner ? 'Dashboard' : 'Register Hotel'}
-                    </button>
-                )}
+                <button
+                    className="mt-4 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 text-sm font-medium rounded-full cursor-pointer transition-all active:scale-95"
+                    onClick={() => {
+                        setIsMenuOpen(false);
+                        isOwner ? navigate('/owner') : (user ? setShowHotelReg(true) : navigate('/owner'));
+                    }}
+                >
+                    {isOwner ? 'Owner Dashboard' : (user ? 'Register Hotel' : 'Hotel Owner Portal')}
+                </button>
 
                 {!user && (
                     <button

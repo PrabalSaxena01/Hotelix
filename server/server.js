@@ -11,6 +11,12 @@ import hotelRouter from './routes/hotelRoutes.js';
 import connectCloudinary from './configs/cloudinary.js';
 import roomRouter from './routes/roomRoutes.js';
 import bookingRouter from './routes/bookingRoutes.js';
+import policyRouter from './routes/policyRoutes.js';
+import addonRouter from './routes/addonRoutes.js';
+import promotionRouter from './routes/promotionRoutes.js';
+import utilityRouter from './routes/utilityRoutes.js';
+import faqRouter from './routes/faqRoutes.js';
+import inquiryRouter from './routes/inquiryRoutes.js';
 import { stripeWebhook } from './controllers/stripeWebhooks.js';
 
 // Connect to Cloudinary
@@ -69,6 +75,12 @@ app.use('/api/user', userRouter);
 app.use('/api/hotels', hotelRouter);
 app.use('/api/rooms', roomRouter);
 app.use('/api/bookings', bookingRouter);
+app.use('/api/policies', policyRouter);
+app.use('/api/addons', addonRouter);
+app.use('/api/promotions', promotionRouter);
+app.use('/api/utilities', utilityRouter);
+app.use('/api/faqs', faqRouter);
+app.use('/api/inquiries', inquiryRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

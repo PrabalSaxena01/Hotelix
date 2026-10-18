@@ -40,21 +40,21 @@ const Footer = () => {
                     <p className='font-playfair text-base font-semibold tracking-wider text-gray-800 uppercase'>Company</p>
                     <ul className='mt-4 flex flex-col gap-2.5 text-sm'>
                         <li><Link to="/#about" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">About Us</Link></li>
-                        <li><Link to="/rooms" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Destinations</Link></li>
-                        <li><Link to="/#experience" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Experiences</Link></li>
-                        <li><a href="#about" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Careers</a></li>
-                        <li><a href="#about" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Partners</a></li>
+                        <li><Link to="/rooms" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Accommodations</Link></li>
+                        <li><Link to="/add-ons" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Bespoke Add-Ons</Link></li>
+                        <li><Link to="/promotions" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Seasonal Offers</Link></li>
+                        <li><Link to="/owner" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Hotel Owner Portal</Link></li>
                     </ul>
                 </div>
 
                 <div>
-                    <p className='font-playfair text-base font-semibold tracking-wider text-gray-800 uppercase'>Support</p>
+                    <p className='font-playfair text-base font-semibold tracking-wider text-gray-800 uppercase'>Guest Support</p>
                     <ul className='mt-4 flex flex-col gap-2.5 text-sm'>
-                        <li><a href="#support" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Help Center</a></li>
-                        <li><a href="#support" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Safety Information</a></li>
-                        <li><a href="#support" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Cancellation Options</a></li>
-                        <li><a href="mailto:support@hotelix.com" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Contact Us</a></li>
-                        <li><a href="#support" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Accessibility</a></li>
+                        <li><Link to="/faqs" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Help Center & FAQs</Link></li>
+                        <li><Link to="/policies" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Guest Policies</Link></li>
+                        <li><Link to="/utilities" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Amenities & Facilities</Link></li>
+                        <li><Link to="/contact" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Contact Concierge</Link></li>
+                        <li><Link to="/policies" className="hover:text-blue-600 hover:translate-x-1 transition-all duration-200 inline-block">Cancellation Terms</Link></li>
                     </ul>
                 </div>
 
