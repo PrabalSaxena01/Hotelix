@@ -1,0 +1,25 @@
+# Ignore all node_modules
+client/node_modules/
+server/node_modules/
+node_modules/
+
+# Ignore env files
+client/.env
+client/.env.local
+server/.env
+.env
+.env.local
+
+# Ignore log files
+*.log
+
+# Ignore OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Ignore build outputs & scrapes
+client/dist/
+dist/
+course.html
+course_files/
